@@ -1,0 +1,18 @@
+Assembler| Maquina                | Pseudocodigo
+-------------------------------------------------------------
+LM       | 0000 0000 0000 0000    | A ← MEM
+RM       | 0001 0000 0000 0000    | MEM ← A
+SUM      | 0010 0000 0000 0000    | A ← A + MEM
+RES      | 0011 0000 0000 0000    | A ← A - MEM
+AND      | 0100 0000 0000 0000    | A ← A AND MEM
+OR       | 0101 0000 0000 0000    | A ← A OR MEM
+XOR      | 0110 0000 0000 0000    | A ← A XOR MEM
+NAND     | 0111 0000 0000 0000    | A ← NOT (A AND MEM)
+JZ       | 1000 0000 0000 0000    | if A == 0 then PC ← dir
+JMP      | 1001 0000 0000 0000    | PC ← dir
+JNZ      | 1010 0000 0000 0000    | if A ≠ 0 then PC ← dir
+JPOS     | 1011 0000 0000 0000    | if A > 0 then PC ← dir
+IN       | 1100 0000 0000 0000    | A ← Entrada
+OUT      | 1101 0000 0000 0000    | Salida ← A
+NOP      | 1110 0000 0000 0000    | No hace nada
+STP      | 1111 0000 0000 0000    | Detiene ejecución
