@@ -1,0 +1,47 @@
+Registros para la PC de 8 bits
+
+Registros esenciales:
+
+1. PC (Program Counter)
+   - Guarda la dirección de la próxima instrucción a ejecutar en memoria.
+   - Longitud: 8 bits
+
+2. IR (Instruction Register)
+   - Guarda la instrucción actual traída de memoria antes de ser decodificada.
+   - Longitud: 16 bits
+
+3. CU (Control Unit)
+   - Decodifica la instrucción contenida en el IR y activa las señales de control correspondientes.
+   - No es un registro, sino una unidad lógica de control.
+
+4. A (Acumulador)
+   - Registro general que almacena operandos y resultados de operaciones aritmético-lógicas realizadas por la ALU.
+   - Longitud: 8 bits
+
+5. Entrada / Salida (E/S)
+   - Entrada: recibe datos del exterior.
+     Longitud: 8 bits
+   - Salida: envía datos al exterior.
+     Longitud: 8 bits
+
+6. MAR (Memory Address Register)
+   - Guarda la dirección de memoria a la que se desea acceder (lectura o escritura).
+   - Longitud: 8 bits
+
+7. MDR (Memory Data Register)
+   - Guarda los datos leídos desde memoria o los datos que se desean escribir en ella.
+   - Longitud: 8 bits
+
+Resumen:
+
+| Registro   | Función                                         | Longitud   |
+|:-----------|:------------------------------------------------|:-----------|
+| PC         | Guarda dirección próxima instrucción            | 8 bits     |
+| IR         | Guarda instrucción actual                       | 16 bits    |
+| CU         | Decodifica instrucciones y genera señales       | -          |
+| A          | Registro de operandos y resultados de la ALU    | 8 bits     |
+| Entrada    | Recibe datos del exterior                       | 8 bits     |
+| Salida     | Envía datos al exterior                         | 8 bits     |
+| MAR        | Guarda dirección de memoria a acceder           | 8 bits     |
+| MDR        | Guarda datos leídos o a escribir en memoria     | 8 bits     |
+|:-----------|:------------------------------------------------|:-----------|
