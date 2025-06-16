@@ -1,0 +1,34 @@
+        LM  10      ; A ← F1
+        OUT         ; mostrar F1
+        LM  11      ; A ← F2
+        OUT         ; mostrar F2
+
+        LM  13      ; A ← CONT
+        SUM 14      ; A ← CONT + N
+        RES 14      ; A ← (CONT + N) - N = CONT
+        JPOS 24     ; si CONT >= N, terminar
+
+LOOP:   LM  10      ; A ← F1
+        SUM 11      ; A ← F1 + F2
+        ROM 12      ; TEMP ← A
+
+        LM  11      ; A ← F2
+        ROM 10      ; F1 ← A
+
+        LM  12      ; A ← TEMP
+        ROM 11      ; F2 ← A
+
+        OUT         ; mostrar nuevo número
+
+        LM  13      ; A ← CONT
+        SUM 1F      ; A ← CONT + 1 (suponiendo 1 en 1F)
+        ROM 13      ; CONT ← A
+
+        LM  13      ; A ← CONT
+        RES 14      ; A ← CONT - N
+        JPOS 24     ; si CONT >= N, terminar
+
+        JMP LOOP    ; saltar a LOOP
+
+FIN:    STP
+
